@@ -30,6 +30,11 @@ To support HTTP hosted : add the Boolean type Value to `YES` for `NSAllowsArbitr
 
 ## Client-Server App
 
+- Create and configure the client-server app with javascript file : `main.js`
+- Create and configure `.tvml` files
+
+- TVML Templates here : [Apple TV Markup Language Reference Templates](https://developer.apple.com/library/prerelease/tvos/documentation/LanguagesUtilities/Conceptual/ATV_Template_Guide/index.html#//apple_ref/doc/uid/TP40015064-CH41-SW1).
+
 
 ## Code Example
 
@@ -75,13 +80,6 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 ...
 
 ```
-
-Create and configure the client-server app with javascript file : `main.js`
-
-
-Create and configure `.tvml` files
-
-TVML Templates here : [Apple TV Markup Language Reference Templates](https://developer.apple.com/library/prerelease/tvos/documentation/LanguagesUtilities/Conceptual/ATV_Template_Guide/index.html#//apple_ref/doc/uid/TP40015064-CH41-SW1).
 
 
 ## Usage
