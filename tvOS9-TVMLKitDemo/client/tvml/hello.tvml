@@ -1,0 +1,11 @@
+<document>
+    <alertTemplate>
+        <title>TVMLKit tvOS Example</title>
+            <button>
+                <text>First Button Example</text>
+            </button>
+            <button>
+                <text>Second Button Example</text>
+            </button>
+    </alertTemplate>
+</document>

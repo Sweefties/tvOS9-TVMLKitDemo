@@ -1,0 +1,41 @@
+<document>
+    <stackTemplate>
+        <banner>
+            <title>TVML Stack Template : Collection List</title>
+        </banner>
+        <collectionList>
+            <shelf>
+                <section>
+                    <lockup>
+                        <img src="https://pixabay.com/static/uploads/photo/2015/09/09/21/19/aircraft-933442_640.jpg" width="640" height="360" />
+                        <title>Aircraft</title>
+                    </lockup>
+                    <lockup>
+                        <img src="https://pixabay.com/static/uploads/photo/2015/09/05/15/13/bee-924426_640.jpg" width="640" height="360" />
+                        <title>Bee</title>
+                    </lockup>
+                    <lockup>
+                        <img src="https://pixabay.com/static/uploads/photo/2015/08/26/05/58/cicada-908128_640.jpg" width="640" height="360" />
+                        <title>Cicada</title>
+                    </lockup>
+                </section>
+            </shelf>
+            <shelf>
+                <section>
+                    <lockup>
+                        <img src="https://pixabay.com/static/uploads/photo/2015/09/02/12/48/computer-918678_640.jpg" width="640" height="360" />
+                        <title>Computer</title>
+                    </lockup>
+                    <lockup>
+                        <img src="https://pixabay.com/static/uploads/photo/2014/09/23/21/21/iphone-6-458151_640.jpg" width="640" height="360" />
+                        <title>iPhone 6</title>
+                    </lockup>
+                    <lockup>
+                        <img src="https://pixabay.com/static/uploads/photo/2015/05/28/14/53/ux-788002_640.jpg" width="640" height="360" />
+                        <title>UX Prototype Design</title>
+                    </lockup>
+                </section>
+            </shelf>
+        </collectionList>
+    </stackTemplate>
+</document>

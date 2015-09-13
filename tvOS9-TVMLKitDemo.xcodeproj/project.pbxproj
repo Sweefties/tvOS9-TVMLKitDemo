@@ -11,6 +11,9 @@
 		7EC5D5551BA5075100EFC496 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D5541BA5075100EFC496 /* ViewController.swift */; };
 		7EC5D5581BA5075100EFC496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D5561BA5075100EFC496 /* Main.storyboard */; };
 		7EC5D55A1BA5075100EFC496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D5591BA5075100EFC496 /* Assets.xcassets */; };
+		7EC5D5661BA50B7C00EFC496 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D5651BA50B7C00EFC496 /* main.js */; };
+		7EC5D56A1BA50EE500EFC496 /* hello.tvml in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D5691BA50EE500EFC496 /* hello.tvml */; };
+		7EC5D56C1BA5185C00EFC496 /* index.tvml in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5D56B1BA5185C00EFC496 /* index.tvml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		7EC5D5571BA5075100EFC496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EC5D5591BA5075100EFC496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EC5D55B1BA5075100EFC496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EC5D5651BA50B7C00EFC496 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = client/js/main.js; sourceTree = "<group>"; };
+		7EC5D5691BA50EE500EFC496 /* hello.tvml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hello.tvml; path = client/tvml/hello.tvml; sourceTree = "<group>"; };
+		7EC5D56B1BA5185C00EFC496 /* index.tvml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.tvml; path = client/tvml/index.tvml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +58,64 @@
 		7EC5D5511BA5075100EFC496 /* tvOS9-TVMLKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7EC5D5521BA5075100EFC496 /* AppDelegate.swift */,
-				7EC5D5541BA5075100EFC496 /* ViewController.swift */,
+				7EC5D5641BA50B2800EFC496 /* client */,
+				7EC5D5631BA50AA000EFC496 /* Root */,
+				7EC5D5621BA50A9600EFC496 /* Controllers */,
+				7EC5D5611BA50A8800EFC496 /* Ressources */,
+			);
+			path = "tvOS9-TVMLKitDemo";
+			sourceTree = "<group>";
+		};
+		7EC5D5611BA50A8800EFC496 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
 				7EC5D5561BA5075100EFC496 /* Main.storyboard */,
 				7EC5D5591BA5075100EFC496 /* Assets.xcassets */,
 				7EC5D55B1BA5075100EFC496 /* Info.plist */,
 			);
-			path = "tvOS9-TVMLKitDemo";
+			name = Ressources;
+			sourceTree = "<group>";
+		};
+		7EC5D5621BA50A9600EFC496 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D5541BA5075100EFC496 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7EC5D5631BA50AA000EFC496 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D5521BA5075100EFC496 /* AppDelegate.swift */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		7EC5D5641BA50B2800EFC496 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D5681BA50E5800EFC496 /* tvml */,
+				7EC5D5671BA50B8300EFC496 /* js */,
+			);
+			name = client;
+			sourceTree = "<group>";
+		};
+		7EC5D5671BA50B8300EFC496 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D5651BA50B7C00EFC496 /* main.js */,
+			);
+			name = js;
+			sourceTree = "<group>";
+		};
+		7EC5D5681BA50E5800EFC496 /* tvml */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D5691BA50EE500EFC496 /* hello.tvml */,
+				7EC5D56B1BA5185C00EFC496 /* index.tvml */,
+			);
+			name = tvml;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,8 +175,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC5D56C1BA5185C00EFC496 /* index.tvml in Resources */,
+				7EC5D5661BA50B7C00EFC496 /* main.js in Resources */,
 				7EC5D55A1BA5075100EFC496 /* Assets.xcassets in Resources */,
 				7EC5D5581BA5075100EFC496 /* Main.storyboard in Resources */,
+				7EC5D56A1BA50EE500EFC496 /* hello.tvml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
