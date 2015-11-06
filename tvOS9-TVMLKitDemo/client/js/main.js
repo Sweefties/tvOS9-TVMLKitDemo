@@ -20,7 +20,7 @@ function pushDoc(document) {
 }
 
 /*
- App Launch
+ App Launch - update your url in `path`
  */
 App.onLaunch = function(options) {
     var title = "Apple Tv - TVMLKit";
