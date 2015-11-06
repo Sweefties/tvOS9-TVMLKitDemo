@@ -55,7 +55,7 @@ function alert(title, description, buttonText, doneCallback) {
                 <text>${buttonText}</text>
             </button>
         </alertTemplate>
-    </document>`
+    </document>`;
     var parser = new DOMParser();
     var alertDOMElement = parser.parseFromString(alertXMLString, "application/xml");
     alertDOMElement.addEventListener("select", doneCallback, false);
