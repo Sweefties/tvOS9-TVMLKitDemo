@@ -43,7 +43,7 @@ App.onExit = function() {
 }
 
 /*
- Show Custom Alert Template on launch
+ Show Custom Alert Template on launch.
  */
 function alert(title, description, buttonText, doneCallback) {
     var alertXMLString = `<?xml version="1.0" encoding="UTF-8" ?>
