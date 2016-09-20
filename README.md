@@ -23,6 +23,10 @@ Licence CCO Public Domain from : [Pixabay.com](https://pixabay.com)
 
 Tested on tvOS 9.0 Simulator.
 
+## Important
+
+Get the `master` branch for XCode 8 / Swift 3 updated project.
+
 ## App Transport Security Settings
 
 To support HTTP hosted : add the Boolean type Value to `YES` for `NSAllowsArbitraryLoads` in app's `info.plist` file.
