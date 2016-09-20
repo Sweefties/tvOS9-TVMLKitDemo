@@ -20,22 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     // MARK: - UIApplication Overrides
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.window = UIWindow(frame:UIScreen.main.bounds)
         
         /// Create the TVApplicationControllerContext
         let appControllerContext = TVApplicationControllerContext()
         
         /// Javascript Context for TVMLKit Application
-        if let javaScriptURL = NSURL(string: AppDelegate.TVBootURL) {
+        if let javaScriptURL = URL(string: AppDelegate.TVBootURL) {
             appControllerContext.javaScriptApplicationURL = javaScriptURL
         }
         
         appControllerContext.launchOptions["BASEURL"] = AppDelegate.TVBaseURL
         
-        if let launchOptions = launchOptions as? [String: AnyObject] {
-            for (kind, value) in launchOptions {
-                appControllerContext.launchOptions[kind] = value
+        if let dictionary = launchOptions as [UIApplicationLaunchOptionsKey: Any]?, let dict = dictionary as [NSString: AnyObject]? {
+            for (kind, value) in dict {
+                appControllerContext.launchOptions[kind as String] = value
             }
         }
         
@@ -45,23 +45,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         // ...
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         // ...
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         // ...
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         // ...
     }
 
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
         // ...
     }
 
@@ -73,24 +73,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 typealias TVApplicationDelegate = AppDelegate
 extension TVApplicationDelegate : TVApplicationControllerDelegate {
     
-    func appController(appController: TVApplicationController, didFailWithError error: NSError) {
-        print("\(__FUNCTION__) invoked with error: \(error)")
+    func appController(_ appController: TVApplicationController, didFail error: Error) {
+        print("\(#function) invoked with error: \(error)")
         
         let title = "Error Launching Application"
         let message = error.localizedDescription
-        let alertController = UIAlertController(title: title, message: message, preferredStyle:.Alert )
+        let alertController = UIAlertController(title: title, message: message, preferredStyle:.alert )
         
-        self.appController?.navigationController.presentViewController(alertController, animated: true, completion: { () -> Void in
+        self.appController?.navigationController.present(alertController, animated: true, completion: { () -> Void in
             // ...
         })
     }
     
-    func appController(appController: TVApplicationController, didStopWithOptions options: [String : AnyObject]?) {
-        print("\(__FUNCTION__) invoked with options: \(options)")
+    func appController(_ appController: TVApplicationController, didStop options: [String : Any]?) {
+        print("\(#function) invoked with options: \(options)")
     }
     
-    func appController(appController: TVApplicationController, didFinishLaunchingWithOptions options: [String : AnyObject]?) {
-        print("\(__FUNCTION__) invoked with options: \(options)")
+    func appController(_ appController: TVApplicationController, didFinishLaunching options: [String : Any]?) {
+        print("\(#function) invoked with options: \(options)")
     }
     
 }
